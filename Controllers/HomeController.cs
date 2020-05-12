@@ -33,12 +33,18 @@ namespace SquareRootWeb.Controllers
 
             int numberOne;
             int numberTwo;
+
             while ((!int.TryParse(numOne, out numberOne)) || (!int.TryParse(numTwo, out numberTwo)))
+
+            try {
+
             {
                 // Console.WriteLine("This is not a number!");
                 numOne = firstNumber;
                 numTwo = secondNumber;
             }
+            }catch(err){console.log("This is not a number")}
+
             double sqr1 = Math.Sqrt(numberOne);
             double sqr2 = Math.Sqrt(numberTwo);
 
